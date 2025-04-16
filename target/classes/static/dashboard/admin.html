@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/styles/admin.css">
+</head>
+
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <button id="logoutButton">Logout</button>
+  </header>
+  <nav>
+    <a href="#users">Manage Users</a>
+    <a href="#books">Manage Books</a>
+  </nav>
+  <main>
+    <!-- Section 1: Manage Users -->
+    <section id="usersSection">
+      <h2>Manage Users</h2>
+      
+      <table id="usersTable">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- User rows will be populated here -->
+        </tbody>
+      </table>
+
+    </section>
+
+    <!-- Section 2: Manage Books -->
+    <section id="books">
+      <h2>Manage Books</h2>
+
+      <!-- Add Book Section -->
+      <section id="addBookSection">
+        <h3>Add a New Book</h3>
+        <!-- Add Book Button -->
+        <button id="toggleAddBookForm">➕ Add Book</button>
+
+        <!-- Add Book Form (Initially Hidden) -->
+        <form id="addBookForm" style="display: none; margin-top: 1rem;">
+          <input type="text" id="isbn" placeholder="ISBN" required />
+          <input type="text" id="title" placeholder="Title" required />
+          <input type="text" id="author" placeholder="Author" required />
+          <input type="text" id="genre" placeholder="Genre" required />
+          <input type="number" id="totalCopies" placeholder="Total Copies" required />
+          <button type="submit">Add Book</button>
+        </form>
+      </section>
+
+      <!-- Temporary Books Preview Section -->
+      <section id="bookPreviewSection" style="display: none; margin-top: 2rem;">
+        <h3>Temporary Books</h3>
+        <table id="tempBooksTable" class="horizontal-only">
+          <thead>
+            <tr>
+              <th>ISBN</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Genre</th>
+              <th>Total Copies</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Temporary books will be dynamically added here -->
+          </tbody>
+        </table>
+        <button id="saveAllBooksButton" style="margin-top: 1rem;">💾 Save All Books</button>
+      </section>
+
+      <!-- Saved Books Table -->
+      <h3>Saved Books</h3>
+      <table id="savedBooksTable">
+        <thead>
+          <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Available Copies</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Saved books will be dynamically added here -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+  <script src="/scripts/admin.js"></script>
+</body>
+
+</html>

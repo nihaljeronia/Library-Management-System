@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="styles/user.css">
+</head>
+<body>
+  <header>
+    <h1 id="welcomeMessage">Welcome, User</h1>
+    <button id="logoutButton">Logout</button>
+  </header>
+  <main>
+    <!-- Saved Books Section -->
+    <section id="savedBooksSection">
+      <h2>Saved Books</h2>
+      <table id="savedBooksTable">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Available Copies</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Saved books will be dynamically added here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Currently Borrowed Books Section -->
+    <section id="borrowedBooksSection">
+      <h2>Currently Borrowed Books</h2>
+      <table id="borrowedBooksTable">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Borrow Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Borrowed books will be dynamically added here -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Borrowing History Section -->
+    <section id="borrowingHistorySection">
+      <h2>Borrowing History</h2>
+      <table id="borrowingHistoryTable">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Borrow Date</th>
+            <th>Return Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Borrowing history will be dynamically added here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script src="scripts/useer.js"></script>
+</body>
+</html>
